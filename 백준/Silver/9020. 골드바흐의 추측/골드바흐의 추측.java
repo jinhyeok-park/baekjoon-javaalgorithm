@@ -1,4 +1,3 @@
-
 import java.util.*;
 import java.io.*;
 
@@ -9,6 +8,7 @@ class Main {
 		
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 		String s = br.readLine();
 		
 		int max = 0;
@@ -58,7 +58,7 @@ class Main {
 			{
 				if(primels.get(up) && primels.get(down))
 				{
-					System.out.println(down + " " + up);
+					sb.append(down).append(' ').append(up).append('\n');
 					break;
 				}
 				up++;
@@ -67,7 +67,7 @@ class Main {
 		}
 		
 		
-		
+		System.out.print(sb);
 		
 	}
 
